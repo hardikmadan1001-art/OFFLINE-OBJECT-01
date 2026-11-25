@@ -1,0 +1,23 @@
+{
+  "name": "offline-object-01",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node scripts/local.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "node scripts/local.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource-variable/playfair-display": "5.3.0",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/instrument-serif": "5.3.0",
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.184.0",
+    "typescript": "^5.9.3",
+    "vite": "7.3.8"
+  }
+}

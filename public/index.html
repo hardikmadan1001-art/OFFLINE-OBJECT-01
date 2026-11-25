@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1728">
+    <meta name="color-scheme" content="dark">
+    <title>OFFLINE®</title>
+    <link rel="icon" href="/mark.svg" type="image/svg+xml">
+    <style>
+      html, body { height: 100%; }
+      body { margin: 0; min-height: 100svh; overflow: hidden; background: #080f15; }
+      #bg-gradient { position: fixed; inset: 0; pointer-events: none; }
+      #webgl { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 1; touch-action: none; }
+      #ui-container { position: fixed; inset: 0; z-index: 5; pointer-events: none; }
+    </style>
+
+    <link rel="stylesheet" href="/assets/main-yeWZtezw.css">
+    <link rel="stylesheet" href="/film-type.css">
+    <link rel="stylesheet" href="/exhibit.css">
+    <script src="/palettes.js"></script>
+    <script src="/exhibit.js" defer></script>
+    <script type="module" src="/assets/main-BYq3OzcY.js"></script>
+  </head>
+  <body class="webgl-loader-overlay offline-exhibit">
+    <svg class="film-palette" width="0" height="0" aria-hidden="true">
+      <filter id="offline-color" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values=".78 .61 -.28 0 .004  .065 .72 .14 0 -.012  .035 -.165 1.075 0 .028  0 0 0 1 0"/>
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues=".008 .20 .48 .79 1"/>
+          <feFuncG type="table" tableValues=".016 .18 .43 .72 .94"/>
+          <feFuncB type="table" tableValues=".039 .235 .49 .75 .91"/>
+        </feComponentTransfer>
+      </filter>
+    </svg>
+    <div id="bg-gradient" aria-hidden="true"></div>
+    <canvas id="webgl" role="img" aria-label="OFFLINE interactive film. Draw a loop, or hold Space to trace the loop on the keyboard." tabindex="0"></canvas>
+    <main id="film-editorial" aria-label="OFFLINE film">
+      <div class="film-gallery" id="film-gallery" aria-hidden="true">
+        <picture>
+          <source srcset="/assets/film/gallery-portrait.webp" media="(max-aspect-ratio: 4/5)">
+          <img src="/assets/film/gallery-wide.webp" alt="" width="1920" height="1080" decoding="async">
+        </picture>
+      </div>
+      <div class="film-lens" aria-hidden="true"></div>
+      <h1 class="film-title film-title--gallery" id="gallery-line" aria-hidden="true">Once we looked<br>at the world.</h1>
+      <h2 class="film-title film-title--noise" id="noise-line" aria-hidden="true">Always more.</h2>
+      <p class="film-loading" id="film-loading" role="status">Loading film</p>
+    </main>
+    <header class="film-chrome" aria-label="Film settings">
+      <span class="film-brand" aria-label="Offline">OFFLINE<sup>®</sup></span>
+      <a class="film-palette-link" href="/palette.html">Palette</a>
+    </header>
+    <div id="ui-container" role="region" aria-label="Scene controls"></div>
+    <div id="end-shot" hidden></div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Film Serif;
+  src: url('/assets/fonts/instrument-serif-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Film Sans;
+  src: url('/assets/fonts/dm-sans-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --film-serif: 'Film Serif', Georgia, serif;
+  --film-sans: 'Film Sans', Arial, sans-serif;
+}
